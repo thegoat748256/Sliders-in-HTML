@@ -20,16 +20,16 @@
             transition: 0.5s;
         }
         #Slides img {
-            width: 450px;
+            width: 500px;
             height: 250px;
-            object-fit: cover;
+            object-fit: fill;
         }
         .Slider {
-            width: 600px;
-            height: 600px;
+            width: 450px;
+            height: 300px;
             overflow: hidden;
             margin: 50px;
-             border: 5px solid black;
+            border: 5px solid black;
         }
     </style>
     <meta charset="UTF-8">
@@ -39,9 +39,17 @@
 <body>
     <div class="Slider">
         <div id="Slides">
-            <img src="C:\Users\divya\Downloads\WEB DEVELOPMENT\WEB DEVELOPMENT\Sliders in HTML\img1 (tralalero tralala).webp">
-            <img src="C:\Users\divya\Downloads\WEB DEVELOPMENT\WEB DEVELOPMENT\Sliders in HTML\img2 tung tung tung tung sahur.webp">
-            <img src="C:\Users\divya\Downloads\WEB DEVELOPMENT\WEB DEVELOPMENT\Sliders in HTML\img3 (bombardino crocodilo).jpg">
+            
+            <img src="C:\Users\divya\Downloads\WEB DEVELOPMENT\WEB DEVELOPMENT\Sliders in HTML\img1.jpg">
+            <img src="C:\Users\divya\Downloads\WEB DEVELOPMENT\WEB DEVELOPMENT\Sliders in HTML\img2.jpg">
+            <img src="C:\Users\divya\Downloads\WEB DEVELOPMENT\WEB DEVELOPMENT\Sliders in HTML\img3.jpg">
+            <img src="C:\Users\divya\Downloads\WEB DEVELOPMENT\WEB DEVELOPMENT\Sliders in HTML\img4.jpg">
+            <img src="C:\Users\divya\Downloads\WEB DEVELOPMENT\WEB DEVELOPMENT\Sliders in HTML\img5.jpg">
+            <img src="C:\Users\divya\Downloads\WEB DEVELOPMENT\WEB DEVELOPMENT\Sliders in HTML\img6.jpg">
+            <img src="C:\Users\divya\Downloads\WEB DEVELOPMENT\WEB DEVELOPMENT\Sliders in HTML\img7.jpg">
+            <img src="C:\Users\divya\Downloads\WEB DEVELOPMENT\WEB DEVELOPMENT\Sliders in HTML\img8.jpg">
+            <img src="C:\Users\divya\Downloads\WEB DEVELOPMENT\WEB DEVELOPMENT\Sliders in HTML\img9.jpg">
+            <img src="C:\Users\divya\Downloads\WEB DEVELOPMENT\WEB DEVELOPMENT\Sliders in HTML\img10.jpg">
         </div>
         <button id="BTN1">❯</button>
         <button id="BTN2">❮</button>
@@ -51,12 +59,12 @@
         const slides = document.getElementById("Slides")
         const total = slides.children.length
         document.getElementById("BTN1").onclick = () => {
-            index = (index - 1 + total) % total
-            slides.style.transform = `translateX(-${index * 500}px)`;
+            index = (index + 1 + total) % total
+            slides.style.transform = `translateX(-${index * 450}px)`;
         }
          document.getElementById("BTN2").onclick = () => {
-            index = (index + 1) % total
-            slides.style.transform = `translateX(-${index * 500}px)`;
+            index = (index - 1) % total
+            slides.style.transform = `translateX(-${index * 450}px)`;
          }
     </script>
 </body>
